@@ -1,6 +1,7 @@
 html {
   scroll-padding-top: 70px; 
   scroll-behavior: smooth;
+  min-width: 550px;
 }
 
 body {
@@ -32,6 +33,8 @@ a:hover {
   background-color: lavender;
   position: fixed;
   width: 100%;
+  min-width: 550px;
+
   top: 0;
   left:0;
   z-index: 1000;
@@ -91,33 +94,8 @@ hr {
   margin-top: calc(41px + 2.9em);
 }
 
-@media (max-width: 768px) {
-
-  header {
-    width: 90%;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  img.profile-image {
-    width: 180px;
-    max-width: 60%;
-    margin: 0;
-  }
-
-  .header-text {
-    margin: 20px 0 0 0;
-  }
-
-  h1 {
-    font-size: 2em;
-  }
-
-}
-
 header {
-  width: 80%;
+  width: 90%;
   max-width: 800px;
   margin: 0 auto;
   color: lavenderblush;
@@ -126,7 +104,6 @@ header {
 
 img.profile-image {
   margin: -30px 0 0 0;
-  min-width: none;
   max-width: 300px;
   object-fit: contain;
 }
@@ -148,12 +125,30 @@ header hr {
   width: 100%;
 }
 
+@media (max-width: 700px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header-text {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+
+  address {
+    text-align: center;
+  }
+
+}
 
 
 /******* SECTIONS CONTENT ********/
 
 section {
-  width: 80%;
+  width: 90%;
   max-width: 800px;
   height: auto;
   margin: 50px auto 50px auto;
@@ -168,11 +163,16 @@ section {
 }
 
 .collapsible::before{
-  content: "\2B9F"; 
+  content: url(images/caret-down-fill.svg); 
+  width: 1em;
+  vertical-align: bottom;
+
 }
 
 .collapsible.active::before{
-  content: "\2B9D"; 
+  content: url(images/caret-up-fill.svg); 
+  width: 1em;
+  vertical-align: bottom;
 }
 
 .abstract {
@@ -181,7 +181,7 @@ section {
   color: lavenderblush;
   max-height: 0;
   overflow: hidden;
-  transition: 0.2s ease-out;
+  transition: max-height 0.2s ease-out;
 }
 
 
