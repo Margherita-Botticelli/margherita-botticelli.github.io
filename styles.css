@@ -1,0 +1,186 @@
+html {
+  scroll-padding-top: 70px; 
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: lavender;
+  font-family: monospace;
+  font-size: 1.2em;
+}
+
+.container {
+  width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: inherit;
+}
+
+
+/******* NAVIGATION BAR ********/
+
+.navbar {
+  overflow: hidden;
+  background-color: lavender;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left:0;
+  z-index: 1000;
+  padding-bottom: 10px;
+}
+
+.navbar-text {
+  width: 100%;
+  padding: 1em 0 0.5em 0 ;
+  justify-content: space-between;
+  display: flex;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.navbar-links a {
+  color: black;
+  text-decoration: none;
+  border: 2px solid transparent;
+  padding: 0.2em 0.2em;
+}
+
+.navbar-links a:hover {
+  border: 2px solid black;
+}
+
+.navbar-title:hover {
+  text-decoration: none;
+}
+
+.navbar-title {
+  font-weight: bold;
+  margin: 0 0 0 2.5%;
+  text-decoration: none;
+  color: black;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.navbar-links {
+  margin: 0 2.5% 0 0;
+}
+
+hr {
+  background-color: black;
+  height: 2px;
+  border-width: 0px;
+  width: 95%;
+  margin: 0 auto;
+  max-width: 1500px;
+}
+
+/******* HEADER CONTENT ********/
+
+#header-background{
+  background-color: #333333;
+  margin: 0;
+  margin-top: calc(41px + 2.9em);
+}
+
+header {
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+  color: lavender;
+  display: flex;
+}
+
+img.profile-image {
+  height: auto;
+  margin: -30px 0 0 0;
+  width: 300px;
+}
+
+.header-text {
+  vertical-align: top;
+  margin: 20px auto 0 20px;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin: 0;
+  color: lavender;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+header hr {
+  width: 100%;
+}
+
+
+
+/******* SECTIONS CONTENT ********/
+
+section {
+  width: 80%;
+  max-width: 800px;
+  height: auto;
+  margin: 50px auto 50px auto;
+  color: black;
+}
+
+.publication-title {
+  margin: 1em 0 0 0;
+}
+
+.publication-authors {
+  margin: 0.2em 0;
+}
+
+.publication-journal {
+  margin: 0;
+}
+
+.abstract{
+  display: none;
+}
+
+
+.abstract.show{
+  display: block;
+}
+
+.abstract-hide{
+  display:none;
+  cursor: pointer;
+  margin-top: 0.5em;
+}
+
+.abstract-show{
+  cursor:pointer;
+  margin-top: 0.5em;
+}
+
+
+figure {
+  margin: 0;
+  padding: 20px 0;
+  width: 100%;
+}
+
+
+.article-image iframe {
+  width: 100%;
+  height: 50vh;
+  border: none;
+}
+
+.article-link {
+  font-style: italic;
+}
+
+
