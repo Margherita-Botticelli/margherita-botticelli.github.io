@@ -197,6 +197,7 @@ header hr {
 
   address {
     text-align: center;
+    margin-bottom: 0.5em;
   }
 
 }
@@ -263,6 +264,11 @@ figure {
 
 .article-image iframe {
   width: 100%;
+  height: 50vh;
+  border: none;
+}
+
+.article-image img {
   height: 50vh;
   border: none;
 }
