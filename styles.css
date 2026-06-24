@@ -1,7 +1,6 @@
 html {
   scroll-padding-top: 70px; 
   scroll-behavior: smooth;
-  min-width: 550px;
 }
 
 body {
@@ -33,7 +32,6 @@ a:hover {
   background-color: lavender;
   position: fixed;
   width: 100%;
-  min-width: 550px;
 
   top: 0;
   left:0;
@@ -77,6 +75,18 @@ a:hover {
   margin: 0 2.5% 0 0;
 }
 
+.navbar .hamburger-icon {
+  display: none;
+}
+
+.navbar #navbar-links {
+  display: none;
+}
+
+#line-hamburger-menu {
+  display: none;
+}
+
 hr {
   background-color: black;
   height: 2px;
@@ -98,7 +108,7 @@ header {
   width: 90%;
   max-width: 800px;
   margin: 0 auto;
-  color: lavenderblush;
+  color: lavender;
   display: flex;
 }
 
@@ -126,6 +136,53 @@ header hr {
 }
 
 @media (max-width: 700px) {
+  
+  /* Hide the links inside the navigation menu (except for logo/home) */
+  .navbar .navbar-links {
+    display: none;
+  }
+
+  .navbar #navbar-links {
+    max-height: 0;
+    display: block;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+
+  .navbar #navbar-links a{
+    text-decoration: none;
+    display: block;
+    color: black;
+    margin: 0.5em 0 0.5em 2.5%;
+  }
+
+  /* Style the hamburger menu */
+  .navbar .hamburger-icon {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 1.25% 2.5% 0 0;
+  }
+
+  .hamburger-icon div{
+    width: 30px;
+    height: 4px;
+    background-color: black;
+    margin: 6px auto;
+  }
+
+  #line-hamburger-menu {
+    display: none;
+    background-color: black;
+    height: 2px;
+    border-width: 0px;
+    width: 95%;
+    margin: 0 auto;
+    max-width: 1500px;
+  }
+
+  
   header {
     display: flex;
     flex-direction: column;
@@ -178,10 +235,10 @@ section {
 .abstract {
   padding: 0 18px;
   background-color: #333333;
-  color: lavenderblush;
+  color: lavender;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.2s ease-out;
+  transition: max-height 0.5s ease-out;
 }
 
 
