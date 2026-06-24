@@ -95,7 +95,7 @@ header {
   width: 80%;
   max-width: 800px;
   margin: 0 auto;
-  color: lavender;
+  color: lavenderblush;
   display: flex;
 }
 
@@ -133,6 +133,32 @@ section {
   color: black;
 }
 
+/******* ABSTRACTS ********/
+
+.collapsible {
+	cursor: pointer;
+  margin-top: 0.5em;
+}
+
+.collapsible::before{
+  content: "\2B9F"; 
+}
+
+.collapsible.active::before{
+  content: "\2B9D"; 
+}
+
+.abstract {
+  padding: 0 18px;
+  background-color: #333333;
+  color: lavenderblush;
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.2s ease-out;
+}
+
+
+/******* ARTICLES ********/
 .publication-title {
   margin: 1em 0 0 0;
 }
@@ -145,33 +171,11 @@ section {
   margin: 0;
 }
 
-.abstract{
-  display: none;
-}
-
-
-.abstract.show{
-  display: block;
-}
-
-.abstract-hide{
-  display:none;
-  cursor: pointer;
-  margin-top: 0.5em;
-}
-
-.abstract-show{
-  cursor:pointer;
-  margin-top: 0.5em;
-}
-
-
 figure {
   margin: 0;
   padding: 20px 0;
   width: 100%;
 }
-
 
 .article-image iframe {
   width: 100%;
