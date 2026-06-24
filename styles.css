@@ -8,6 +8,7 @@ body {
   background-color: lavender;
   font-family: monospace;
   font-size: 1.2em;
+  width: 100vw;
 }
 
 .container {
@@ -101,13 +102,15 @@ header {
 
 img.profile-image {
   margin: -30px 0 0 0;
-  width: 300px;
+  min-width: 200px;
+  max-width: 300px;
   object-fit: contain;
 }
 
 .header-text {
   vertical-align: top;
   margin: 20px auto 0 20px;
+  width: auto;
 }
 
 h1 {
